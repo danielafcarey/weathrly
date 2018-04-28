@@ -16,25 +16,25 @@ class Search extends Component {
   }
 
   updateLocation = (event) => {
-    this.setState({ userInputLocation: event.target.value }, this.getSuggestions)
+    this.setState({ userInputLocation: event.target.value }, this.getSuggestions);
   }
   
   getSuggestions() {
-    this.clearSuggestions()
+    this.clearSuggestions();
     let locationSuggestions;
 
     if (isNaN(parseInt(this.state.userInputLocation, 10)) && this.state.userInputLocation.length > 1) {
-      locationSuggestions = locationTree.suggest(this.state.userInputLocation)
+      locationSuggestions = locationTree.suggest(this.state.userInputLocation);
     }
 
     if (locationSuggestions) {
-      this.setState({suggestionsArray: locationSuggestions})
+      this.setState({suggestionsArray: locationSuggestions});
     }
   }
   
   clearSuggestions() {
     if (this.state.userInputLocation === '') {
-      this.setState({ suggestionsArray: [] })
+      this.setState({ suggestionsArray: [] });
     }
   }
 
@@ -57,7 +57,7 @@ class Search extends Component {
         <input className="submit-button" type='submit' value='Search' />
       </form>
       </div>
-    )
+    );
   }
 }
 

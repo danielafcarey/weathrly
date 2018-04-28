@@ -10,14 +10,14 @@ import fetchApi from './Api';
 
 class App extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
       apiData: null,
       location: '',
       sevenHourBtnClicked: true,
       tenDayBtnClicked: false,
       validLocation: true
-    }
+    };
 
     this.submitLocation = this.submitLocation.bind(this);
     this.getApiData = this.getApiData.bind(this);
@@ -39,7 +39,7 @@ class App extends Component {
     if (this.state.location) {
       fetchApi(this.state.location).then(response => {
         response.json().then(this.validateAndCleanApiData)
-      }).catch(error => console.log(error))
+      }).catch(error => console.log(error));
     }
   }
 
@@ -56,9 +56,9 @@ class App extends Component {
 
   toggleForecastBtnState(buttonName) {
     if (buttonName === 'sevenHour') {
-      this.setState({ sevenHourBtnClicked: true, tenDayBtnClicked: false })
+      this.setState({ sevenHourBtnClicked: true, tenDayBtnClicked: false });
     } else {
-      this.setState({ sevenHourBtnClicked: false, tenDayBtnClicked: true })
+      this.setState({ sevenHourBtnClicked: false, tenDayBtnClicked: true });
     }
   }
 
@@ -69,7 +69,7 @@ class App extends Component {
         <Search submitLocation={ this.submitLocation } />
         <InvalidLocation validLocation={ this.state.validLocation }/>
       </div>
-    )
+    );
   }
 
   displayApp() {
@@ -82,7 +82,7 @@ class App extends Component {
         <SevenHour data={ this.state.apiData.sevenHourArray } buttonState={ this.state.sevenHourBtnClicked } />
         <TenDay data={ this.state.apiData.tenDayArray } buttonState={ this.state.tenDayBtnClicked } />
       </div>
-    )
+    );
   }
 
   render() {
@@ -92,6 +92,7 @@ class App extends Component {
       return this.displayApp();
     }
   }
-}
+
+};
 
 export default App;

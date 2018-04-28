@@ -17,7 +17,7 @@ const CurrentWeather = ({ currentWeather }) => {
         <p className="day-summary">{ currentWeather.forecast.summary }</p>
       </section>
     </div>
-  )
+  );
  }
 
 export default CurrentWeather;

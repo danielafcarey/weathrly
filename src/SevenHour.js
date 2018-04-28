@@ -9,13 +9,13 @@ const SevenHour = ({ data, buttonState }) => {
               temp={ hour.temp } 
               key={ index } 
             />
-  })
+  });
   
   return (
     <div className={ buttonState ? "seven-hour" : "hidden" } >
       { sevenHourArray }
     </div>
-  )
+  );
 }
 
 export default SevenHour;

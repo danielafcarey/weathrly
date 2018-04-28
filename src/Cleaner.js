@@ -12,7 +12,7 @@ const cleanApiData = (apiData) => {
       low: apiData.forecast.simpleforecast.forecastday[0].low.fahrenheit,
       summary: apiData.forecast.txt_forecast.forecastday[0].fcttext
     }
-  }
+  };
 
   let sevenHourArray = () => {
     return apiData.hourly_forecast.map((hourObj) => {
@@ -22,8 +22,8 @@ const cleanApiData = (apiData) => {
         temp: hourObj.temp.english,
         key: hourObj.FCTTIME.hour
       };
-    }).slice(0, 7)
-  }
+    }).slice(0, 7);
+  };
 
   let tenDayArray = () => {
     return apiData.forecast.simpleforecast.forecastday.map((day, index) => {
@@ -33,12 +33,12 @@ const cleanApiData = (apiData) => {
         high: day.high.fahrenheit,
         low: day.low.fahrenheit,
         key: day.period
-      }
+      };
     });
   };
 
-  return { currentDayObject, sevenHourArray: sevenHourArray(), tenDayArray: tenDayArray() }
+  return { currentDayObject, sevenHourArray: sevenHourArray(), tenDayArray: tenDayArray() };
 
-}
+};
 
 export default cleanApiData;

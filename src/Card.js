@@ -9,7 +9,7 @@ const Card = ({ title, icon, temp }) => {
            />
       <h3 className="temp">{ temp } ℉</h3>
     </div>
-  )
-}
+  );
+};
 
 export default Card;

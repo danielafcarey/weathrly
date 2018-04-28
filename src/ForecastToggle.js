@@ -6,12 +6,11 @@ class ForecastToggle extends Component {
     let sibling = "nextSibling";
 
     if (event.target.name === "tenDay") {
-      sibling = "previousSibling"
+      sibling = "previousSibling";
     }
 
     event.target.classList.add('clicked-button');
-    event.target[sibling].classList.remove('clicked-button')
-   
+    event.target[sibling].classList.remove('clicked-button');
     this.props.toggleForecastBtnState(event.target.name);
   }
 
@@ -25,7 +24,7 @@ class ForecastToggle extends Component {
                 className="ten-day-button"
                 name="tenDay">10 day</button>
       </div>
-    )
+    );
   }
 }
   
