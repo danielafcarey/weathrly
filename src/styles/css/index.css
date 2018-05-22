@@ -410,7 +410,8 @@ body {
       text-align: center;
       margin: 0 1rem 0 0; }
   .current-weather .current-weather-icon {
-    height: 7rem; }
+    height: 7rem;
+    width: 7rem; }
   .current-weather .current-day-forecast {
     grid-area: 2/2/3/3;
     display: flex;
@@ -478,7 +479,7 @@ body {
     background-size: auto; }
 
   .search {
-    width: 60vw; }
+    width: 50vw; }
 
   .ten-day {
     flex-wrap: wrap;
