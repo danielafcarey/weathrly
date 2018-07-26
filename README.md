@@ -32,7 +32,12 @@ Weathrly is a basic ReactJS app that will tell you the current weather and forec
 
 ![mobile](https://user-images.githubusercontent.com/34175382/38843607-11d5fe82-41ad-11e8-8953-c9c3c70c4bd8.png)
 
+##### Set Up
 
+* Clone this project
+* Run `npm install` from the root directory
+* Run `npm start` and visit localhost:3000 in your browser
+* Run tests with `npm test`
 ---
 
 ## Contributors
